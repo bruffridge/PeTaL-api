@@ -24,3 +24,11 @@ connect to docker container
 
 Used this guide to do initial setup
 https://nodejs.org/en/docs/guides/nodejs-docker-webapp/
+
+Setting up to run in Google Cloud Run
+https://cloud.google.com/run/docs/quickstarts/build-and-deploy
+
+https://cloud.google.com/cloud-build/docs/quickstart-build
+https://cloud.google.com/cloud-build/docs/quickstart-deploy
+https://cloud.google.com/cloud-build/docs/automating-builds/create-manage-triggers
+

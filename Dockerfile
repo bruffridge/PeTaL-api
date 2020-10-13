@@ -1,4 +1,4 @@
-FROM node:12
+FROM node:12-slim
 
 # Create app directory
 WORKDIR /usr/src/app
@@ -7,15 +7,15 @@ WORKDIR /usr/src/app
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
 # where available (npm@5+)
 COPY package*.json ./
-RUN npm install
+RUN npm ci --only=production
 
 # https://medium.com/better-programming/docker-in-development-with-nodemon-d500366e74df
 #RUN npm install -g nodemon
 
 # Bundle app source
-COPY . .
+COPY . ./
 
-EXPOSE 8080
+EXPOSE 80
 CMD [ "node", "server.js" ]
 # use this to auto restart node server on code changes in development. also uncomment line 13.
 #CMD [ "nodemon", "server.js" ]

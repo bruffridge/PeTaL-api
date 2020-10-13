@@ -6,7 +6,7 @@ const wiki = require('wikijs').default;
 const { Client } = require('pg')
 
 // Constants
-const PORT = 8080;
+const PORT = 80;
 const HOST = '0.0.0.0';
 const clientConn = {
   user: 'petal_admin',
@@ -17,7 +17,7 @@ const clientConn = {
 }
 
 // If you want to run the API without the database for development, set stub to true.
-const stub = false;
+const stub = true;
 const stubLabels = [
   { label: 'Reduce drag', id: 1 },
   { label: 'Absorb shock', id: 2 },
@@ -29,14 +29,14 @@ const stubArticles = [{"id":7681471,"url":"https://en.wikipedia.org/wiki/Aimophi
 
 // App
 const app = express();
-
+/*
 app.use(function(req, res, next) {
   // Allows our locally running react client to connect to this locally running api.
   res.header("Access-Control-Allow-Origin", "http://localhost:3000"); // update to match the domain you will make the request from
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
-
+*/
 app.get('/v1/functions', (req, res) => {
 
   if(stub) {

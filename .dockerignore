@@ -3,3 +3,5 @@ npm-debug.log
 README.md
 .gitignore
 .vscode
+Dockerfile
+.dockerignore
